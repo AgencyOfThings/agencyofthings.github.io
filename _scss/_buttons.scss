@@ -1,0 +1,55 @@
+.btn {
+	display: inline-block;
+	border: 1px solid $btn-default;
+	border-radius: $border-radius;
+	padding: 13px 22px;
+	line-height: 1;
+	background-color: transparent;
+	color: $btn-default;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all .2s ease-in;
+	&:hover {
+		text-decoration: none;
+		background-color: darken(#fff, 12%);
+	}
+	&--primary {
+		border-color: $color-1;
+		background-color: $color-1;	
+		color: $white;
+		&:hover { background-color: darken($color-1, 12%); }
+	}
+	> .icon { margin-right: 10px; }
+}
+.btn-group {
+	@include group;
+	> .fl { margin-right: 10px; }
+	> .fr { margin-left: 10px; }
+}
+
+// Unique Buttons
+// ------------------
+.play-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	z-index: 5;
+	background-color: rgba(0,0,0,0.7);
+	cursor: pointer;
+	transform: translate(-50%,-50%);
+	transition: transform .2s ease-in-out;
+	&:after {
+		content: ' ';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		margin-left: 3px;
+		@include arrow(right, 35px, 35px, $white);
+	}
+	&:hover { transform: translate(-50%,-50%) scale(1.2) }
+}

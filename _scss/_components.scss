@@ -1,0 +1,502 @@
+// Home page sections
+// -----------------------------------
+.home-panel {
+	position: relative;
+	padding: 150px 0;
+	text-align: center;
+	z-index: 2;
+	font-size: 1.2em;
+	
+	&--img {
+		padding: 250px 0;	
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center center;
+		color: $white;
+		.home-panel__title,
+		.subhead { color: inherit; }
+	}
+	&--skew {
+		background-color: $white;
+		transform: skewY(6deg);
+		margin-top: -150px;
+		margin-bottom: -150px;
+		z-index: 3;
+		.home-panel__title { color: $color-1; }
+		.home-panel__wrap { transform: skewY(-6deg); }
+	}
+	&--hero {
+		padding-top: 150px;
+		h4 { font-weight: 900; }
+	}
+	&__wrap {
+		@include group;
+		max-width: 750px; 
+		margin: 0 auto;
+		@include mq(down, $break-md) {
+			padding: 0 20px;
+		}
+	}
+	&__title {
+		margin-top: 0;
+		font-weight: 100;
+		&:before {
+			content: ' ';
+			top: -5px;
+			@extend .slash-icon;
+			@include mq(down, $break-sm) {
+				display: block;
+				margin: 0 auto 10px auto;
+			}
+		}
+	}
+	&.last { padding: 150px 0; }
+}
+
+// Posts
+// -----------------------------------
+.post {
+	& + .post {
+		margin-top: 65px;
+	}
+	&__header {
+		margin-bottom: 20px;
+	}
+	&__meta,
+	&__title {
+		margin: 0;
+	}
+	&__title {
+		margin: 5px 0;
+		color: $text-dark;
+		line-height: 1.3;
+		font-size: 2.6em;
+		font-weight: 100;
+	}
+	&__content {
+		img { max-width: 100%; }
+	}
+	&.come-in {
+	  transform: translateY(150px);
+	  animation: come-in 0.8s ease forwards;
+	}
+	&.already-visible {
+	  transform: translateY(0);
+	  animation: none;
+	}
+}
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+
+// Media object
+// -----------------------------------
+.media {
+	@include container;
+	margin-bottom: 40px;
+	&__left {
+		@include span(2);
+		@include mq(down, $break-sm) {
+			@include span(3);
+		}
+		@include mq(down, $break-xs) {
+			@include span(12);
+		}
+	}
+	&__body {
+		.list-clients { margin-left: -15px; }
+		@include span(10 last);
+		@include mq(down, $break-sm) {
+			@include span(9 last);
+		}
+		@include mq(down, $break-xs) {
+			@include span(12);
+		}
+	}
+	&__heading {
+		margin: 0;
+		font-weight: bold;
+	}
+	&__sub-heading {
+		margin-top: 0;
+		color: lighten($text-base, 10%);
+		font-weight: bold;
+	}
+	&__img {
+		display: block;
+		width: 100%;
+		@include mq(down, $break-xs) {
+			max-width: 150px;
+			margin-bottom: 15px;
+		}
+	}
+	
+}
+
+// Video player and list for IOTV page
+// -----------------------------------
+.video {
+	position: relative;
+	max-width: 640px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	&__cover {
+		position: relative;
+		z-index: 2;
+		min-height: 325px;
+		img { width: 100%; }
+		&:after {
+			content: ' ';
+			@include overlay;
+			background:linear-gradient(transparent 70%, rgba(0, 0, 0, 0.7) 100%);
+		}
+	}
+	&__cover-content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 20px;
+		z-index: 12;
+		color: $white;
+		text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+		p { margin: 0; }
+	}
+	&__title {
+		margin: 0;
+		color: inherit;
+		text-transform: none;
+		font-size: 1.3em;
+		font-family: $font-family-light;
+	}
+	&__iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 300px;
+		z-index: 1;
+	}
+	@include mq(down, $break-sm) {
+		&__cover-content { 		
+			background: $bg-dark;
+			text-shadow: none; 
+		}
+		.play-btn { top: 33%; }
+	}
+}
+
+
+// Modal window
+// -----------------------------------
+.modal-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: $bg-overlay;
+	z-index: 8;
+}
+.modal {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 690px;
+	transform: translate(-50%, -50%);
+	z-index: 9;
+	@include mq (down, $break-sm) {
+		width: 90%;
+	}
+	&__content {
+		padding: 20px;
+		background-color: $white;
+	}
+	&__title {
+		margin: 0;
+		line-height: 51px;
+		font-family: $font-family-light;
+		font-size: 1.8em;
+	}
+	&__close {
+		position: absolute;
+		top: 25px;
+		right: 8px;
+		padding-top: 4px;
+		background: transparent;
+		border: 0;
+		font-size: 1.8em;
+		line-height: 1;
+		color: $text-medium;
+	}
+}
+
+// Contact list
+// -----------------------------------
+.list-contact {
+	margin-bottom: 20px;
+	> li {
+		margin-bottom: 10px;
+	}
+	.icon {
+		box-sizing: content-box;
+		margin-right: 10px;
+		border-right: 1px solid $text-light;
+		padding-right: 10px;
+		color: $text-light;
+	}
+}
+
+// Client list
+// -----------------------------------
+.list-clients {
+	img {
+		max-height: 50px;
+		@include mq(down, $break-sm) {
+			max-height: 40px;
+		}
+	}
+}
+
+
+// Google map
+// -----------------------------------
+.map {
+	width: 100%;
+	height: 400px;
+}
+.map-infobox-wrapper {
+	overflow: visible !important;
+	width: 180px;
+}
+.map-infobox {
+	position: relative;
+	padding: 10px;
+	text-align: center;
+	font-size: 1.2em;
+	font-family: $font-family-light;
+	background-color: $bg-sidebar;
+	&__title {
+		font-family: $font-family-heavy;
+		color: $color-1;
+		margin: 0;
+		margin-bottom: 0px;
+		font-size: 1.2em;
+		text-transform: uppercase;
+	}
+	&__body {
+		margin: 0;
+		color: $white;
+		font-size: 1em;
+	}
+	&:after {
+		content: ' ';
+		display: block;
+		position: absolute;
+		bottom: -10px;
+		left: 50%;
+		margin-left: -10px;
+		border-top: 10px solid $bg-sidebar;
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+	}
+}
+
+// Boxes
+// -----------------------------------
+.box {
+	position: relative;
+	margin-bottom: 20px;
+	padding: 30px;
+	border-radius: $border-radius;
+	color: inherit;
+
+	&.box--clients {
+		border: 1px solid $text-light;
+		padding: 15px 20px;
+		p { margin-bottom: 0; }
+	}
+
+	&.box--dark {
+		background-color: $bg-dark;
+		color: $text-light;
+	}
+	&.box--blue {
+		background-color: $color-1;	
+		color: $white;
+	}
+
+	&__title {
+		margin: 0 0 15px 0;
+		font-size: 1.7em;
+		font-family: $font-family-heavy;
+		font-weight: 100;
+	}
+
+	*:last-child {
+		margin-bottom: 0;
+	}
+}
+.box-main {
+	@include mq(up, $break-sm) {
+		min-height: 556px;
+	}
+}
+
+
+// Services Timeline
+.timeline {
+	position: relative;
+	margin-top: 30px;
+	padding: 45px 0;
+	&__left {
+		padding-right: 65px;
+		.timeline__item {
+			&:before { right: -88px; }
+			&:after {
+				right: -20px;
+				border-left: 20px solid $bg-dark;
+			}
+			&.box--blue {
+				&:after { border-left-color: $color-1; }
+			}
+		}
+	}
+	&__right {
+		padding-left: 65px;
+		.timeline__item {
+			&:before { left: -88px; }
+			&:after {
+				left: -20px;
+				border-right: 20px solid $bg-dark;
+			}
+			&.box--blue {
+				&:after { border-right-color: $color-1; }
+			}
+		}
+	}
+	&__item {
+		&:before {
+			content: ' ';
+			position: absolute;
+			top: 50%;
+			margin-top: -15px;
+			display: block;
+			border: 5px solid $white;
+			border-radius: 50%;
+			width: 30px;
+			height: 30px;
+			background-color: $color-1;
+			z-index: 2;
+		}
+		&:after {
+			content: ' ';
+			position: absolute;
+			display: block;
+			top: 50%;
+			margin-top: -15px;
+			border-top: 15px solid transparent;
+			border-bottom: 15px solid transparent;
+		}
+	}
+	&__line {
+		position: absolute;
+		left: 50%;
+		top: 0;
+		bottom: 0;
+		width: 4px;
+		margin-left: -2px;
+		background-color: $bg-dark;
+		z-index: 1;
+		&:before,
+		&:after {
+			content: ' ';
+			position: absolute;
+			left: -5px;
+			display: block;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			background-color: $bg-dark;
+		}
+		&:before { top: -7px; }
+		&:after  { bottom: -7px; }
+	}
+
+	@include mq(down, $break-sm) {
+		&__left,
+		&__right {
+			padding-right: 0;
+			padding-left: 40px;
+			.timeline__item {
+				&:before {
+					left: -55px;
+					right: auto;
+				}
+				&:after {
+					left: -20px;
+					right: auto;
+					border-right: 20px solid $bg-dark;
+					border-left: 0;
+				}
+				&.box--blue {
+					&:after { border-right-color: $color-1; }
+				}
+			}
+		}
+		&__line { left: 0; }
+	}
+}
+
+// Tabs
+.tab-nav {
+	margin: 0 0 20px 0;
+	padding: 0;
+	border: 2px solid $color-1;
+	list-style: none;
+	@include group;
+	li {
+		display: block;
+		float: left;
+		width: 50%;
+	}
+	a {
+		display: block;
+		padding: 15px;
+		line-height: 1.5;
+		font-size: 1.2em;
+		text-align: center;
+		font-family: $font-family-heavy;
+		&.active {
+			background-color: $color-1;
+			color: $white;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	@include mq(down, $break-sm) {
+		margin-left: -20px;
+		margin-right: -20px;
+		border-right: 0;
+		border-left: 0;
+	}
+}
+.tab-content {
+	.tab-panel {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}	
+}
+
+
+
+
+
+
+

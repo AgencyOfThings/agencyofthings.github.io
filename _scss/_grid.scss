@@ -1,0 +1,47 @@
+.grid {
+	@include container;
+
+	@for $i from 1 through map-get($susy, columns) {
+		&__col-#{$i} {
+			@include span($i);
+			&.last {
+				@include last;
+			}
+		}
+	}
+	@include mq(down, $break-sm) {
+		.grid__col-sm-6 {
+			@include span(6);
+			&:nth-of-type(2n) {
+				@include last;
+			}
+		}
+	}
+	@include mq(down, $break-sm) {
+		@for $i from 1 through map-get($susy, columns) {
+			&__col-#{$i} {
+				@include span(12);			
+			}
+		}
+	}
+
+	// Grid pushes 
+	@for $i from 1 through map-get($susy, columns) {
+		&__push-#{$i} {
+			@include push($i);
+
+		}
+	}
+	@include mq(down, $break-sm) {
+		@for $i from 1 through map-get($susy, columns) {
+			&__push-#{$i} {
+				@include push(0);
+
+			}
+		}
+	}
+}
+
+.divider-right {
+	border-right: 1px solid $text-light;
+}

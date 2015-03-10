@@ -1,0 +1,89 @@
+---
+layout: main
+extra_js:
+- /js/contact.js
+external_js:
+- https://maps.googleapis.com/maps/api/js?key=AIzaSyCaBP-xM3C8gytmkNGLY_TopUZ-c5-FkAY
+- http://google-maps-utility-library-v3.googlecode.com/svn/tags/infobox/1.1.9/src/infobox_packed.js
+---
+<div class="content">
+	{% include header.html %}
+	<div class="grid">
+		<div class="grid__col-5">
+			<h2 class="h2-sm">Contact details</h2>
+			<ul class="list-unstyled list-contact text-larger">
+				<li>
+					<a class="link-social" href="{{ page.twitterLink }}" target="_blank">
+						<svg class="icon"><use xlink:href="#icon--twitter" /></svg>{{ page.twitterHandle }}
+					</a>
+				</li>
+				<!-- <li>
+					<a class="link-social" href="tel:{{ page.tel }}" target="_blank">
+						<svg class="icon"><use xlink:href="#icon--phone" /></svg>{{ page.tel }}
+					</a>
+				</li> -->
+				<li>
+					<a class="link-social" href="mailto:{{ page.email }}" target="_blank">
+						<svg class="icon"><use xlink:href="#icon--mail" /></svg>{{ page.email }}
+					</a>
+				</li>
+			</ul>
+			</p>
+				<a href="#" class="btn btn--primary js-modal" data-target="#modal-contact"><svg class="icon"><use xlink:href="#icon--mail" /></svg>Send us a message</a>
+			<p>
+			<br>
+			<p><strong>Work for SharpEnd?</strong> We are recruiting for a Creative Technologist and an Account Manager. Email <a href="mailto:jobs@sharpendagency.com" target="_blank">jobs@sharpendagency.com</a> and let us know who you are.</p>
+		</div>
+		<div class="grid__col-7 last">
+			<div class="map" id="map" data-map-marker-text="{{ page.mapMarkerText }}">
+			</div>
+		</div>
+	</div>
+	<div id="modal-contact" class="modal">
+		<button class="modal__close js-modal-close" type="button">
+			<span class="sr-only">Close</span>
+			<svg class="icon"><use xlink:href="#icon--cross" /></svg>
+		</button>
+		<div class="modal__content">
+			<h4 class="modal__title text-uppercase"><svg class="icon icon--lg icon--circle fl"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon--mail"></use></svg> Send us a message</h4>
+			<p class="text-larger">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi voluptatem sunt ea quod soluta veritatis debitis, tempora consectetur obcaecati tenetur?</p>
+			<form action="http://formspree.io/{{ page.email }}" method="POST" class="form-default">
+				<input type="hidden" name="_subject" value="New Sharpend email!!">
+				<input type="text" name="_gotcha" style="display:none">
+				<input type="hidden" name="_next" value="http://mattrussell36.github.io/sharpend/contact/?sent=true">
+				<div class="grid">
+					<div class="grid__col-6 field">
+						<label for="name" class="sr-only">Your name</label>
+						<input class="input" id="name" type="text" name="name" placeholder="Your name">
+					</div>
+					<div class="grid__col-6 field last">
+						<label for="email" class="sr-only">Email address</label>
+						<input class="input" id="email" type="email" name="_replyto" placeholder="Email address">
+					</div>
+					<div class="grid__col-12 field">
+						<label for="subject" class="sr-only">Subject</label>
+						<input class="input" id="subject" type="text" name="subject" placeholder="Subject">
+					</div>
+					<div class="grid__col-12 field">
+						<label for="body" class="sr-only">Your message</label>
+						<textarea class="input" id="body" name="body" placeholder="Your message"></textarea>		
+					</div>
+				</div>
+				<div class="btn-group">
+					<button type="submit" class="btn btn--primary fr">Send Message</button>
+					<button type="button" class="btn fr js-modal-close">Cancel</button>	
+				</div>
+			</form>
+		</div>
+	</div>
+	<div id="modal-contact-success" class="modal">
+		<button class="modal__close js-modal-close" type="button">
+			<span class="sr-only">Close</span>
+			<svg class="icon"><use xlink:href="#icon--cross" /></svg>
+		</button>
+		<div class="modal__content text-center">
+			<h4 class="modal__title text-uppercase">Message Sent</h4>
+			<p class="text-larger">Thanks! We'll be in touch soon.</p>
+		</div>
+	</div>
+</div>

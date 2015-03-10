@@ -1,0 +1,51 @@
+# Site settings
+title: Sharpend Agency
+email: info@sharpend.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+# baseurl: "/sharpend" # for dev site
+baseurl: "" # for localhost
+url: "mattrussell36.github.io" # the base hostname & protocol for your site
+keep_files: [img]
+exclude: [node_modules, svg, Gruntfile.js]
+# Build settings
+markdown: kramdown
+url_twitter: https://twitter.com/agencyofthings
+url_linkedin: https://www.linkedin.com/company/sharpend-the-agency-of-things
+url_vimeo: https://vimeo.com/user37487047
+prose:
+  siteurl: 'http://mattrussell36.github.io/sharpend/'
+  media: 'img'
+  ignore:
+    - _config.yml
+    - /_layouts
+    - /_includes
+    - /_scss
+    - /_site
+  metadata:
+    _posts/things:
+      - name: "categories"
+        field:
+          element: "hidden"
+          value: "things"
+      - name: "title"
+        field:
+          element: "text"
+          value: ""
+          placeholder: "Enter a title"
+      - name: "type"
+        field:
+          element: "text"
+          value: ""
+          placeholder: "Enter a blog type..."
+      - name: "author"
+        field:
+          element: "select"
+          value: ""
+          options:
+            - name: "Cameron Worth"
+              value: "Cameron Worth"
+            - name: "Michael Bayler"
+              value: "Micahel Bayler"

@@ -1,0 +1,135 @@
+// Nav
+// -------------------
+.nav {
+	&__side {
+		position: fixed;
+		left: 0px;
+		width: 55px;
+		height: 100%;
+		background: $bg-sidebar;
+		z-index: 8;
+		@include group;
+	}
+	&__burger {
+		width: 55px;
+		padding: 15px 14px;
+		border: 0;
+		background-color: $bg-sidebar-top;
+		float: right;
+		
+		.burger {
+			display: block;
+			&__bar {
+				display: block;
+				position: relative;
+				top: 0px;
+				width: 27px;
+				height: 3px;
+				background-color: $white;
+				transition: all .4s linear;
+				transform-origin: center center;
+				& + .burger__bar { margin-top: 5px; }
+				&:nth-of-type(2) { 
+					transition-duration: .1s; 
+					transition-delay: .3s;
+				}
+			}
+			.menu-toggle & {
+				.burger__bar:nth-of-type(1) {
+					top: 7px;
+					transform: rotate(-135deg);	
+				}
+				.burger__bar:nth-of-type(2) {
+					opacity: 0;
+					transition-delay: 0;
+				}
+				.burger__bar:nth-of-type(3) {
+					top: -9px;
+					transform: rotate(135deg);
+				}
+			}
+		}
+	}
+	
+	&__logo {
+		display: block;
+	}
+
+	&__main {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 20px 10px 20px 85px;
+		z-index: 7;
+		overflow: auto;
+		background: $bg-overlay;
+		transition: transform .4s ease-in-out;
+		transform: translateX(-100%);
+		.menu-toggle & {
+			transform: translateX(0);
+		}
+	}
+
+	&__menu {
+		margin: 20px 0;
+		padding: 0;
+		list-style: none;
+
+		a {
+			display: block;
+			padding: 8px 15px;
+			font-size: 1.3em;
+			line-height: 1.9;
+			color: $text-medium;
+			font-family: $font-family-heavy;
+			text-decoration: none;
+			text-transform: uppercase;
+			&:hover {
+				color: $white;
+			}
+		}
+		.active a {
+			color: $color_1;
+			.icon {
+				color: $white;
+			}
+		}
+		
+		.icon {
+			margin-right: 15px;
+			float: left;
+		}
+	}
+	&__social {
+		padding-left: 15px;
+		.social-icon {
+			margin-right: 15px;
+			&:hover { color: $white; }
+		}
+	}
+	@include mq(down, $break-sm) {
+		&__side {
+			top: 0;
+			width: 100%;
+			height: 55px;
+			padding-right: 15px;
+			.logo.mob-only {
+				float: right;
+				padding: 0;
+				width: 114px;
+				height: 55px;
+				background-size: 114px 55px;
+				background-position: center center;
+			}
+		}
+		&__burger {
+			float: left;
+			padding: 18px 14px;
+		}
+		&__main {
+			padding: 69px 15px 20px 15px;
+		}
+	}
+}
