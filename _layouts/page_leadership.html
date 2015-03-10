@@ -22,7 +22,7 @@ layout: main
 				{{ contact.content }}
 				<ul class="list-unstyled list-inline list-clients">
 					{% for client in contact.clients %}
-					<li><img src="{{ site.baseurl }}/img/partners/{{ client.img }}" alt="The alt text"></li>
+					<li><img src="{{ site.baseurl }}/img/{{ client.img }}" alt="The alt text"></li>
 					{% endfor %}
 				</ul>
 			</div>
