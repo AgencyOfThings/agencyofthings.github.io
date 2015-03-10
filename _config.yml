@@ -7,7 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "http://agencyofthings.github.io" # for dev site
 # baseurl: "" # for localhost
-url: "mattrussell36.github.io" # the base hostname & protocol for your site
+url: "http://agencyofthings.github.io" # the base hostname & protocol for your site
 keep_files: [img]
 exclude: [node_modules, svg, Gruntfile.js]
 # Build settings
@@ -16,7 +16,7 @@ url_twitter: https://twitter.com/agencyofthings
 url_linkedin: https://www.linkedin.com/company/sharpend-the-agency-of-things
 url_vimeo: https://vimeo.com/user37487047
 prose:
-  siteurl: 'http://mattrussell36.github.io/sharpend/'
+  siteurl: 'http://agencyofthings.github.io'
   media: 'img'
   ignore:
     - _config.yml
