@@ -1,6 +1,6 @@
 ---
 name:  "Michael Bayler"
-role:  "Founding Partner & Head of Strategy"
+role:  "Founding Partner and Head of Strategy"
 linkedin: https://uk.linkedin.com/in/michaelbayler
 categories: leadership
 img: michael@3x.png
