@@ -1,0 +1,8 @@
+---
+published: true
+categories: things
+title: Welcome to our new site!
+type: Blog
+author: Cameron Worth
+---
+Our new site is finally live and we’re keen to hear any feedback you have. Additionally, if you notice any bugs we’d be grateful if you could email us at <a href="mailto:hello@sharpendagency.com" target="_blank" title="Email us!">hello@sharpendagency.com!</a> and let us know what device and/or browser you are using.
