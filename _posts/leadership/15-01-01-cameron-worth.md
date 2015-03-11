@@ -1,6 +1,6 @@
 ---
 name:  "Cameron Worth"
-role:  "Founding Partner & Head of Client Services"
+role:  "Founding Partner and Head of Client Services"
 linkedin: https://uk.linkedin.com/in/cameronlworth
 categories: leadership
 img: cameron@3x.png
