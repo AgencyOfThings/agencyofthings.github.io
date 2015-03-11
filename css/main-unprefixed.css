@@ -1049,7 +1049,7 @@ a {
     .home-panel--hero h4 {
       font-weight: 900; }
   .home-panel__wrap {
-    max-width: 750px;
+    max-width: 790px;
     margin: 0 auto; }
     .home-panel__wrap:before, .home-panel__wrap:after {
       content: "";

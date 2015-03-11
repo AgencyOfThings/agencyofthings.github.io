@@ -32,7 +32,7 @@
 	}
 	&__wrap {
 		@include group;
-		max-width: 750px; 
+		max-width: 790px; 
 		margin: 0 auto;
 		@include mq(down, $break-md) {
 			padding: 0 20px;
