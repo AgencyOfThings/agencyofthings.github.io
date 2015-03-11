@@ -9,7 +9,7 @@ baseurl: "http://agencyofthings.github.io" # for production site
 # baseurl: "" # for localhost
 url: "http://agencyofthings.github.io" # the base hostname & protocol for your site
 keep_files: [img]
-exclude: [node_modules, svg, Gruntfile.js]
+exclude: [node_modules, svg, Gruntfile.js, CNAME]
 # Build settings
 markdown: kramdown
 url_twitter: https://twitter.com/agencyofthings
