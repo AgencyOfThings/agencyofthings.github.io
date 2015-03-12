@@ -13,8 +13,8 @@ Cam has spent 10 years at the edge of emerging technology, helping businesses tr
 
 He has played central roles in some of the UK’s most exciting startups. Most recently, he led business development at IOT platform EVRYTHNG, delivering breakthrough brand marketing innovations for clients such as Dom Pérignon, Diageo and Air New Zealand.
 
-Cam led new business for The Engine Group, the UK’s largest independent network of 12 cross-discipline agencies, also delivering group-wide client inspiration and education in new technology. 
+Cam led Mobile new business for Engine, the UK’s largest independent network of 12 cross-discipline agencies, also delivering group-wide client inspiration, education and strategy in new technology. 
 
-He was a founder of the NFC marketing platform that delivered the largest global trial of NFC in collaboration with JCDecaux and WPP.
+He was also a founding member of the NFC marketing platform that delivered the largest global trial of NFC in collaboration with JCDecaux and WPP.
 
 Cam has spoken at many technology events including Mobile World Congress, Lab Day London, 4YFN, and Advertising Week.
