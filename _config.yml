@@ -3,7 +3,7 @@ title: Sharpend Agency
 email: info@sharpend.com
 description: > # this means to ignore newlines until "baseurl:"
   Sharpend: The Agency of Things. The world's first strategic agency to combine deep brand insight with leading edge technology. We help brand marketers take on new technologies and we help new technologies take their brands to market.
-baseurl: "http://agencyofthings.github.io" # for production site
+baseurl: "http://www.sharpendagency.com" # for production site
 # baseurl: "" # for localhost
 url: "http://www.sharpendagency.com" # the base hostname & protocol for your site
 keep_files: [img]
