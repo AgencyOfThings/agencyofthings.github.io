@@ -2,12 +2,10 @@
 title: Sharpend Agency
 email: info@sharpend.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Sharpend: The Agency of Things. The world's first strategic agency to combine deep brand insight with leading edge technology. We help brand marketers take on new technologies and we help new technologies take their brands to market.
 baseurl: "http://agencyofthings.github.io" # for production site
 # baseurl: "" # for localhost
-url: "http://agencyofthings.github.io" # the base hostname & protocol for your site
+url: "http://www.sharpendagency.com" # the base hostname & protocol for your site
 keep_files: [img]
 exclude: [node_modules, svg, Gruntfile.js, CNAME]
 # Build settings
