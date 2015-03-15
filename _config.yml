@@ -14,8 +14,8 @@ url_twitter: https://twitter.com/agencyofthings
 url_linkedin: https://www.linkedin.com/company/sharpend-the-agency-of-things
 url_vimeo: https://vimeo.com/user37487047
 prose:
-  siteurl: 'http://agencyofthings.github.io'
-  media: 'img'
+  siteurl: 'http://mattrussell36.github.io/sharpend'
+  media: img
   ignore:
     - _config.yml
     - /_layouts
@@ -35,9 +35,13 @@ prose:
           placeholder: "Enter a title"
       - name: "type"
         field:
-          element: "text"
-          value: ""
-          placeholder: "Enter a blog type..."
+          element: "select"
+          value: "Blog"
+          options:
+            - name: "Blog"
+              value: "Blog"
+            - name: "Video"
+              value: "Video"
       - name: "author"
         field:
           element: "select"
