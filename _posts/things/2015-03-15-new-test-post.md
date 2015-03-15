@@ -1,6 +1,6 @@
 ---
 categories: things
-published: false
+published: true
 title: new test post
 type: Blog
 author: Cameron Worth
