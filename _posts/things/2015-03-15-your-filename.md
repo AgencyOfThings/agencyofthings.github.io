@@ -1,6 +1,6 @@
 ---
 categories: things
-published: false
+published: true
 title: the title
 type: Blog
 author: Cameron Worth
