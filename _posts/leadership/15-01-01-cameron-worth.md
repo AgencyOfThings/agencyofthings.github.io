@@ -11,7 +11,7 @@ clients:
 ---
 Cam has spent 10 years at the edge of emerging technology, helping businesses transform how they respond to disruption.
 
-He has played central roles in some of the UK’s most exciting startups. Most recently, he led business development at IOT platform EVRYTHNG, delivering breakthrough brand marketing innovations for clients such as Dom Pérignon, Diageo and Air New Zealand.
+He has played central roles in some of the UK’s most exciting startups. Most recently, he led business development at IOT platform EVRYTHNG, delivering breakthrough brand marketing innovations for clients such as Dom Pérignon, Diageo and Unilever.
 
 Cam led Mobile new business for Engine, the UK’s largest independent network of 12 cross-discipline agencies, also delivering group-wide client inspiration, education and strategy in new technology. 
 
