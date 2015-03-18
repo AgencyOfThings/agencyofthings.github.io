@@ -16,5 +16,3 @@ He has ignited change programs for many of the world’s largest brands, technol
 Mike is a co-author of the seminal work on strategies for the digital future, Promiscuous Customers: Invisible Brands – Delivering Value in Digital Markets (Capstone, Oxford 2002).
 
 He has also written for Market Leader, The Wall Street Journal, Marketing Week, New Media Age, MediaTel, Design Week, and Design Management Journal.
-
-Among many high-profile speaking engagements, Mike has delivered master classes for The Marketing Society, MIDEM, AdTech, IESE Business School, Sun Microsystems, Microsoft, VMWare, Daily Mail Group, FremantleMedia, The Institute of Direct Marketing and Salesforce.
