@@ -1,0 +1,28 @@
+---
+layout: main
+extra_js:
+- /js/video.js
+- /js/visible.js
+---
+<div class="content js-scroll-push-in" data-push-element=".post">
+	{% include header.html %}
+	
+	<h2>
+		{{ content }}
+	</h2>
+
+	{% for post in site.categories.things %}
+	<div class="post">
+		<div class="post__header">
+			<p class="post__meta">{{ post.type }}</p>
+			<h3 class="post__title">{{ post.title }}</h3>
+			<p class="post__meta">{{ post.author }} &nbsp;&bull;&nbsp; {{ post.date | date: '%B %d %Y' }}</p>	
+		</div>
+		<div class="post__content">
+			{{ post.content }}	
+		</div>
+	</div>
+	{% endfor %}	
+</div>
+
+

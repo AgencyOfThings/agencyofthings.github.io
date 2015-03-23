@@ -1,0 +1,62 @@
+<!-- sticky nav --> 
+<nav class="nav">
+	
+	<div class="nav__side">
+		<button type="button" class="nav__burger js-toggle-menu">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="burger">
+				<span class="burger__bar"></span>
+				<span class="burger__bar"></span>
+				<span class="burger__bar"></span>
+			</span>
+		</button>
+		<span class="logo mob-only"></span>
+	</div>
+	<div class="nav__main">
+		<a href="{{ site.baseurl }}" class="logo" title="Home">Sharpend - The Agency of Things</a>
+		<ul class="nav__menu">
+		{% assign pages = site.pages | sort: 'navOrder' %}
+		{% for p in pages %}
+			{% if p.title %}
+			<li class="{% if page.url == p.permalink %}active{% endif %}">
+				<a href="{{ p.url | prepend: site.baseurl }}" title="{{ p.title }}">
+					<svg class="icon icon--md">
+						<use xlink:href="#icon--{{ p.icon }}" />
+					</svg>
+					{{ p.navText }}
+				</a>
+			</li>
+			{% endif %}
+		{% endfor %}
+		</ul>
+		<ul class="nav__social list-inline">
+			<li>
+				<a class="social-icon social-icon--twitter" href="{{ site.url_twitter }}" target="_blank">
+					<span class="sr-only">Twitter</span>
+					<svg class="icon">
+						<use xlink:href="#icon--twitter-with-circle" />
+					</svg>
+				</a>
+			</li>
+			<li>
+				<a class="social-icon social-icon--linkedin" href="{{ site.url_linkedin }}" target="_blank">
+					<span class="sr-only">Linkedin</span>
+					<svg class="icon">
+						<use xlink:href="#icon--linkedin-with-circle" />
+					</svg>
+				</a>
+			</li>
+			<!-- <li>
+				<a class="social-icon social-icon--vimeo" href="{{ site.url_vimeo }}" target="_blank">
+					<span class="sr-only">Vimeo</span>
+					<svg class="icon">
+						<use xlink:href="#icon--vimeo-with-circle" />
+					</svg>
+				</a>
+			</li> -->
+		</ul>
+	</div>
+	
+</nav>
+
+

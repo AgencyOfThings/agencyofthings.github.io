@@ -1,0 +1,21 @@
+.form-default {
+	.field {
+		margin-bottom: 24px;
+	}
+	.input {
+		display: block;
+		width: 100%;
+		border: 1px solid $input-default;
+		border-radius: $border-radius;
+		padding: 10px;
+		&:focus {
+			border-color: $color-1;
+			box-shadow: none;
+			outline: none;
+		}
+	}
+	textarea.input {
+		max-width: 100%;
+		max-height: 300px;
+	}
+}

@@ -1,0 +1,32 @@
+---
+layout: main
+---
+
+<div class="content">
+	{% include header.html %}	
+	{% for contact in site.categories.leadership %}
+		<div class="media">
+			<div class="media__left">
+				<img src="{{ site.baseurl }}/img/{{ contact.img }}" alt="" class="media__img img-round">
+			</div>
+			<div class="media__body">
+				<h5 class="media__heading">
+					{{ contact.name }}	
+					<a href="{{ contact.linkedin }}" class="social-icon--sm" target="_blank">
+						<svg class="icon">
+							<use xlink:href="#icon--linkedin" />
+						</svg>
+					</a>		
+				</h5>
+				<p class="media__sub-heading">{{ contact.role }}</p>
+				{{ contact.content }}
+				<ul class="list-unstyled list-inline list-clients">
+					{% for client in contact.clients %}
+					<li><img src="{{ site.baseurl }}/img/{{ client.img }}" alt="The alt text"></li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	{% endfor %}
+		
+</div>

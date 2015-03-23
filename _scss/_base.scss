@@ -1,0 +1,187 @@
+
+// General
+// -------------------
+html,
+body {
+	height: 100%;
+}
+html {
+	box-sizing: border-box;
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+}
+body {
+	font-size: $font-size-base;
+	font-family: $font-family-light;
+	font-weight: 200;
+	line-height: 1.5;
+	background-color: #fff;
+	overflow-x: hidden;
+	color: $text-base;
+	-webkit-font-smoothing: antialiased;
+	@include mq (down, $break-sm) {
+		padding-top: 49px;
+	}
+}
+
+*:focus {
+	outline: none;
+	box-shadow: inset 0px 0px 0px 1px $color-1;
+}
+
+a {
+	color: $color-1;
+	text-decoration: none;
+	transition: all .2s ease-in-out;
+	&:hover { text-decoration: underline; }
+}
+
+// Structure
+// -------------------
+.world {
+	min-height: 100%;
+	margin-bottom: -68px;
+	background-color: $white;
+	max-width: 1170px;
+	// Create space for sticky footer
+	&:after {
+		content: ' ';
+		display: block;
+		height: 68px;
+	}
+	&.page-home {
+		max-width: none;
+		padding-bottom: 100px;	
+	}
+}
+.main {
+	padding: 0px 0px 0px 55px;
+	@include mq(down, $break-sm) {
+		padding: 0;
+	}
+}
+.site-footer {
+	height: 68px;
+	padding-left: 55px;
+	p { margin: 0; }
+	@include mq(down, $break-sm) {
+		text-align: center;
+		padding: 0 20px;
+	}
+}
+
+// Used on all pages but not home
+.content {
+	max-width: 1115px;
+	padding: 20px 40px;
+	background-color: $white;
+	@include mq(down, $break-sm) {
+		padding: 20px;
+	}
+}
+
+// Brand elements
+// -------------------
+
+// Logo
+.logo {
+	display: block;
+	height: 97px;
+	padding: 10px 15px;
+	background: url(../img/logo.png) no-repeat 15px 0;
+	@include hide-text;
+	@include retina {
+		background: url(../img/logo@2x.png) no-repeat 15px 0;
+		background-size:204px 97px;
+	}
+}
+.logo--header {
+	width: 469px;
+	height: 220px;
+	margin: 0 auto;
+	background: url(../img/logo-lg.png) no-repeat center center;
+	@include retina {
+		background: url(../img/logo-lg@2x.png) no-repeat center center;
+		background-size: 469px 220px;
+	}
+	@include mq(down, $break-sm) {
+		width: 273px;
+		height: 128px;
+		background-size: 273px 128px;
+		@include retina {
+			background: url(../img/logo-lg@2x.png) no-repeat center center;
+			background-size: 273px 128px;
+		}
+	}
+}
+
+// Icons
+// -------------------
+.icon {
+	position: relative;
+	display: inline-block;
+	top: 2px;
+	width: 1em;
+	height: 1em;
+	line-height: 1;
+	fill: currentColor;
+	&--md {
+		width: 30px;
+		height: 30px;
+	}
+	&--lg {
+		width: 40px;
+		height: 40px;
+		padding: 7px;
+	}
+	&--circle {
+		border-radius: 50%;
+		background-color: $color-1;
+		fill: $white;
+	}
+
+	&.fl { margin-right: 7px; }
+	&.fr { margin-left: 7px; }
+}
+
+.slash-icon {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	top: -1px;
+	width: 26px;
+	height: 38px;
+	margin-right: 5px;
+	background: url(../img/slash.png) no-repeat 0 0;
+	@include retina {
+		background: url(../img/slash@2x.png) no-repeat 0 0;
+		background-size: 50px 38px;
+	}
+}
+
+// Social Icons
+// -------------------
+.social-icon {
+	display: block;
+	color: $text-medium;
+	transition: color .2s ease-in-out;
+	.icon {
+		width: 40px;
+		height: 40px;
+	}
+}
+.social-icon--sm {
+	position: relative;
+	display: inline-block;
+	top: -2px;
+	margin-left: 5px;
+	padding: 1px 3px;
+	font-size: 15px;
+	line-height: 15px;
+	border-radius: 3px;
+	background-color: $text-medium;
+	color: $white;
+	&:hover { background-color: $text-dark; }
+}
+

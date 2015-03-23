@@ -1,0 +1,57 @@
+// ------------------- //
+// Variables
+// ------------------- //
+
+// Font
+// -------------------
+$font-size-base: 15px;
+$font-family-light: 'AvenirLT-Light', sans-serif;
+$font-family-medium: 'AvenirLT-Book', sans-serif;
+$font-family-heavy: 'AvenirLT-Heavy', sans-serif;
+
+// Breakpoints
+// -------------------
+$break-xs: 479px;
+$break-sm: 768px;
+$break-md: 1024px;
+
+
+// Colors
+// -------------------
+
+// Brand colors
+$color-1: #72ccf4;
+
+
+// Other colors
+$white: #fff;
+$black: #1b1b1b;
+
+$btn-default: #aaa;
+$input-default: #c2c2c2;
+
+$bg-gray: #e0e0e0;
+$bg-sidebar: #4c4847;
+$bg-sidebar-top: #373434;
+
+$bg-overlay: rgba(0,0,0,0.85);
+$bg-dark: #4c4847;
+
+// Text colors
+$text-base: #666666;
+$text-dark: #4c4847;
+$text-medium: #cccccc;
+$text-light: #d9d9d9;
+
+$color-1-light: lighten($color-1, 25%);
+
+
+// Base border radius 
+$border-radius: 3px;
+
+// Susy grid
+// -------------------
+$susy: (
+  columns: 12,
+  gutters: 1/4
+);

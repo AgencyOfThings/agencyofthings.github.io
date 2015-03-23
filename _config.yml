@@ -1,0 +1,53 @@
+# Site settings
+title: Sharpend Agency
+email: info@sharpend.com
+description: > # this means to ignore newlines until "baseurl:"
+  Sharpend: The Agency of Things. The world's first strategic agency to combine deep brand insight with leading edge technology. We help brand marketers take on new technologies and we help new technologies take their brands to market.
+baseurl: "http://www.sharpendagency.com" # for production site
+# baseurl: "" # for localhost
+url: "http://www.sharpendagency.com" # the base hostname & protocol for your site
+keep_files: [img]
+exclude: [node_modules, svg, Gruntfile.js, CNAME]
+# Build settings
+markdown: kramdown
+url_twitter: https://twitter.com/agencyofthings
+url_linkedin: https://www.linkedin.com/company/sharpend-the-agency-of-things
+url_vimeo: https://vimeo.com/user37487047
+prose:
+  siteurl: 'http://mattrussell36.github.io/sharpend'
+  media: img
+  ignore:
+    - _config.yml
+    - /_layouts
+    - /_includes
+    - /_scss
+    - /_site
+  metadata:
+    _posts/things:
+      - name: "categories"
+        field:
+          element: "hidden"
+          value: "things"
+      - name: "title"
+        field:
+          element: "text"
+          value: ""
+          placeholder: "Enter a title"
+      - name: "type"
+        field:
+          element: "select"
+          value: "Blog"
+          options:
+            - name: "Blog"
+              value: "Blog"
+            - name: "Video"
+              value: "Video"
+      - name: "author"
+        field:
+          element: "select"
+          value: ""
+          options:
+            - name: "Cameron Worth"
+              value: "Cameron Worth"
+            - name: "Michael Bayler"
+              value: "Micahel Bayler"
