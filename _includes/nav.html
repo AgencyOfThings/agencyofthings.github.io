@@ -17,7 +17,7 @@
 		<ul class="nav__menu">
 		{% assign pages = site.pages | sort: 'navOrder' %}
 		{% for p in pages %}
-			{% if p.title %}
+			{% if p.title && p.hide != true %}
 			<li class="{% if page.url == p.permalink %}active{% endif %}">
 				<a href="{{ p.url | prepend: site.baseurl }}" title="{{ p.title }}">
 					<svg class="icon icon--md">
