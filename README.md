@@ -30,11 +30,11 @@ Use the following snippet
 To unpublish a page without deleting the .md file add it to the exclude parameter in the _config.yml file in the root of the project.
 
 For example:
-`exclude: [node_modules, svg, Gruntfile.js, CNAME, leadership.md, README.md]`
+```exclude: [node_modules, svg, Gruntfile.js, CNAME, leadership.md, README.md]```
 
 Any files inside the square brackets will not be built to the site. You can also do this for posts..
 
 For example the line below would hide dot3 from the partners page:
-`exclude: [node_modules, svg, Gruntfile.js, CNAME, leadership.md, README.md, _posts/partners/15-03-04-dot3.md]`
+```exclude: [node_modules, svg, Gruntfile.js, CNAME, leadership.md, README.md, _posts/partners/15-03-04-dot3.md]```
 
 If you need to reactivate just remove it from inside the brackets.
