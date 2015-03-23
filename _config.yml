@@ -7,7 +7,7 @@ baseurl: "http://www.sharpendagency.com" # for production site
 # baseurl: "" # for localhost
 url: "http://www.sharpendagency.com" # the base hostname & protocol for your site
 keep_files: [img]
-exclude: [node_modules, svg, Gruntfile.js, CNAME]
+exclude: [node_modules, svg, Gruntfile.js, CNAME, leadership.md, README.md]
 # Build settings
 markdown: kramdown
 url_twitter: https://twitter.com/agencyofthings
