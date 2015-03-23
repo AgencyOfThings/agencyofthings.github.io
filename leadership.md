@@ -5,7 +5,6 @@
 # There is a markdown file for each person. 
 # Please follow the naming convention when creating new people for this page.
 layout: page_leadership
-hide: true
 title: Leadership
 navText: Leadership
 class: page-leadership
